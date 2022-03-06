@@ -1,0 +1,71 @@
+html {
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+}
+.title {
+  margin-top: 4%;
+  font-family: 'Lobster Two', cursive;
+  font-size: 4rem;
+}
+
+.quote-container{
+  font-size: 1rem;
+  text-align: center;
+  margin: 2% 30% 0 30%;
+  max-height: 35rem;
+  padding: 5% 5%;
+  color: #fff;
+  border-radius: 2rem;
+}
+
+.quote{
+  padding-bottom: 8%;
+}
+.quote-icon {
+  margin-right: 2%;
+}
+ .quote-button {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  height: 3rem;
+  width: 8rem;
+  background-color: rgb(49, 59, 114);
+  border: 0;
+	outline: none;
+  border-radius: 0.5rem;
+  float: right;
+} 
+.quote-social {
+	width: 2.5rem;
+	height: 2.5rem;  
+	display: inline-block;
+  padding: 2% 2% 0 2%; 
+	background-color: rgb(49, 59, 114);
+	text-align: center;
+	border: 0;
+	border-radius: 0.5rem; 
+	font-size: 1.8rem;
+	color: #fff;
+  float: left;
+}
+
+.quote-button:hover,
+.quote-button:active,
+.quote-social:hover,
+.quote-social:active {
+	cursor: pointer;
+}
+
+.author-name {
+  font-style: italic;
+}
+
+.credit-container {
+  padding-top: 1%;
+  margin: 0 40% 0 40%;
+}
+a {
+  color: #fff;
+}
