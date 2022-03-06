@@ -1,6 +1,6 @@
 {
   "name": "random-quote-machine",
-  "homepage":"https://soledadli.github.io/random-quotes-generator/",
+  "homepage": "https://soledadli.github.io/random-quotes-generator/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
