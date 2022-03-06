@@ -1,4 +1,11 @@
-# Getting Started with Create React App
+# Random Quotes Generator
+
+* The random quotes generator is built with React.JS. 
+* The random background pictures are generated with [Unsplash Image API](https://unsplash.com/developers). 
+* The random quotes are provided by [random-quotes package](https://www.npmjs.com/package/random-quotes).
+
+---
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
