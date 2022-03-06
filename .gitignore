@@ -8,6 +8,9 @@
 # testing
 /coverage
 
+# API
+/src/useConfig.js
+
 # production
 /build
 

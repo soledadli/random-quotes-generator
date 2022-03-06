@@ -1,6 +1,7 @@
 import React,{useEffect, useState} from 'react'
 import Social from './Social'
 import {FaQuoteLeft} from "react-icons/fa"
+import useConfig from '../useConfig'
 
 const Quote = () => {
  // npm i randomquote package
@@ -10,8 +11,7 @@ const Quote = () => {
  const [author, setAuthor] = useState('Benjamin Franklin')
  const [bgImage, setBgImage] = useState('https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?crop=entropy&cs=srgb&fm=jpg&ixid=Mnw1MzE3MnwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0NjQ5OTM1OA&ixlib=rb-1.2.1&q=85')
 
- const clientID =
- "&client_id=3ebe01369e49bd4796bdd7a4dc9d184e33817224260491c3ba8cd2066a75a5fe";
+ const clientID = useConfig()
 
 
  function unsplashGetPhotos() {
