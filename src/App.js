@@ -16,8 +16,10 @@ function App() {
     <ThemeProvider theme = {themeMode}>
       <GlobalStyle />
       <Title />
+      <div className='quote-container'>
       <ChangeColor tgChange = {handleChange}/>
       <Quote />
+      </div>
       <Credit />
     </ThemeProvider>
   );
