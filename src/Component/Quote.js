@@ -1,9 +1,9 @@
-import React,{useEffect, useState} from 'react'
+import React,{useState} from 'react'
 import Social from './Social'
 import {FaQuoteLeft} from "react-icons/fa"
 import useConfig from '../useConfig'
 
-const Quote = () => {
+const Quote = ( ) => {
  // npm i randomquote package
  const Quotes = require("randomquote-api");
 
@@ -32,13 +32,16 @@ const Quote = () => {
  }
 
  return (
-     <div>
-   <div className="quote-container" style= {{backgroundImage:  `url(${bgImage})`}}>
-     <h1 className='quote'><FaQuoteLeft className='quote-icon'/>{quote}</h1>
-     <h3 className='author-name'>{author}</h3>  
-     <button className = 'quote-button' onClick = {handleNext}>New Quote</button>
-     <Social quote={quote} author={author} />
-   </div>
+   <div>
+   <div className='quote-container'>
+   {/* <ChangeColor tgChange = {handleChange}/> */}
+      <div className='quote-bg-container'  style={{backgroundImage:  `url(${bgImage})`}}>
+      <h1 className='quote'><FaQuoteLeft className='quote-icon'/>{quote}</h1>
+      <h3 className='author-name'>{author}</h3>  
+      <button className = 'quote-button' onClick = {handleNext}>New Quote</button>
+      <Social quote={quote} author={author} />
+     </div>
+     </div>
    </div>
  );
 }

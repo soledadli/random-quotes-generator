@@ -5,6 +5,7 @@ html {
 }
 .title {
   margin-top: 4%;
+  margin-bottom: 2%;
   font-family: 'Lobster Two', cursive;
   font-size: 4rem;
 }
@@ -12,11 +13,15 @@ html {
 .quote-container{
   font-size: 1rem;
   text-align: center;
-  margin: 2% 30% 0 30%;
-  max-height: 35rem;
-  padding: 5% 5%;
-  color: #fff;
+  margin: 5% 30% 0 30%;
+}
+
+.quote-bg-container {
+  margin-top: 7%;
+  max-height: 50rem;
+  padding: 15% 10% 15% 10%; 
   border-radius: 2rem;
+
 }
 
 .quote{
@@ -37,6 +42,7 @@ html {
   border-radius: 0.5rem;
   float: right;
 } 
+
 .quote-social {
 	width: 2.5rem;
 	height: 2.5rem;  
@@ -69,3 +75,45 @@ html {
 a {
   color: #fff;
 }
+
+/* ChangeColors Component */
+.color-container {
+  position: absolute;
+ left: 58rem;
+ top: 9rem;
+ padding-top: 2%;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.label {
+  box-sizing: border-box;
+  display: flex;
+  background-color: #000;
+  width: 60px;
+  height: 26px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px;
+  border-radius: 2rem;
+  position: relative;
+}
+
+.ball {
+  background-color: #fff;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+  transform: translateX(32px);
+}
+
