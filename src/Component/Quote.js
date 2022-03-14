@@ -35,14 +35,14 @@ const Quote = () => {
     setQuote(Quotes.randomQuote()['quote'])
     setAuthor(Quotes.randomQuote()['author'])
   }
-  const authorData = quoteData.map(value => value.author)
-  const authorSorted = authorData.sort((a, b) => a.localeCompare(b))
-  const authorSet =  [...new Set(authorSorted)]; 
+  // const authorData = quoteData.map(value => value.author)
+  // const authorSorted = authorData.sort((a, b) => a.localeCompare(b))
+  // const authorSet =  [...new Set(authorSorted)]; 
 
 
   return (
     <div>
-      <Searchbar placeholder="Enter an author's name" data ={authorSet}/>
+      <Searchbar placeholder="Enter an author's name" data = {quoteData} />
       {/* <ChangeColor tgChange = {handleChange}/> */}
       <div className='quote-bg-container' style={{ backgroundImage: `url(${bgImage})` }}>
         <h1 className='quote'><FaQuoteLeft className='quote-icon' />{quote}</h1>
