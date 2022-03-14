@@ -38,7 +38,7 @@ const Quote = ({ data }) => {
         <div className='search'>
           <div className='searchInput' >
             <div className='searchIcon'><BsSearch style={{ color: 'black' }} /></div>
-            <input type='text' placeholder='Write down the names' value={dataInput} onChange={handleFilter}></input>
+            <input type='text' placeholder="Search by authors' names" value={dataInput} onChange={handleFilter}></input>
             <div className='crossIcon'>{dataInput.length == 0 ? <BsCheck style={{ color: 'black' }} />
               : <BsX id='clearBtn' style={{ color: 'black' }} onClick={handleClear} />}
             </div>
@@ -51,11 +51,16 @@ const Quote = ({ data }) => {
                 </a>)
               })}
             </div>
-          )
-          }
+          )   }
+          {dataInput.length != 0 && filteredData.length == 0 ?        
+        <div className='dataResult'>
+          <a className='dataItem' href='#'>
+              <p>There is no quote from this author. </p>
+          </a>    
+        </div> : <div></div> }
+       
         </div>
       </div>
-      {/* <ChangeColor tgChange = {handleChange}/> */}
       <div className='quote-bg-container' style={{ backgroundImage: `url(${bgImage})` }}>
         <h1 className='quote'><FaQuoteLeft className='quote-icon' />
           {filteredData[0] ? Quotes.getbyauthor(filteredData[0], 1)[0].quote : quote}
