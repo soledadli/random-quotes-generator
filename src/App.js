@@ -10,9 +10,7 @@ import quoteData from './Component/quotes.json'
 
 function App() {
   const [theme, handleChange] = useTheme();
-  console.log('theme', theme)
   const themeMode = theme === 'light' ? lightTheme : darkTheme;
-  console.log(quoteData)
   return (
     <ThemeProvider theme={themeMode}>
       <GlobalStyle />

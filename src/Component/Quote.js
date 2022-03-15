@@ -30,7 +30,8 @@ const Quote = ({ data }) => {
     setQuote(Quotes.randomQuote()['quote'])
     setAuthor(Quotes.randomQuote()['author'])
   }
-  const [filteredData, dataInput, handleFilter, handleClear] = useSearch({ data });
+  const [filteredData, dataInput, handleFilter, handleClear, handleAutofill, autofill, handleFillChange] = useSearch({ data });
+  console.log(autofill)
 
   return (
     <div>
@@ -38,20 +39,25 @@ const Quote = ({ data }) => {
         <div className='search'>
           <div className='searchInput' >
             <div className='searchIcon'><BsSearch style={{ color: 'black' }} /></div>
-            <input type='text' placeholder="Search by authors' names" value={dataInput} onChange={handleFilter}></input>
+            { autofill === 'off' ?  <input type='text' value={dataInput} onChange={handleFilter}></input> 
+            :<input type='text' placeholder="Search by authors' names" value={dataInput} onChange={handleFillChange}></input>
+            }
+           
             <div className='crossIcon'>{dataInput.length == 0 ? <BsCheck style={{ color: 'black' }} />
               : <BsX id='clearBtn' style={{ color: 'black' }} onClick={handleClear} />}
             </div>
           </div>
-          {filteredData.length != 0 && (
+
+          {filteredData.length != 0 && !autofill && (
             <div className='dataResult'>
-              {filteredData.slice(0, 10).map((value, key) => {
+              {filteredData.slice(0, 5).map((value, key) => {
                 return (<a className='dataItem' href='#'>
-                  <p>{value}</p>
+                  <p key = {value} onClick = {handleAutofill}>{value}</p>
                 </a>)
               })}
             </div>
-          )   }
+          )}
+    
           {dataInput.length != 0 && filteredData.length == 0 ?        
         <div className='dataResult'>
           <a className='dataItem' href='#'>
